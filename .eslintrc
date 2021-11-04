@@ -38,7 +38,6 @@
       }
     ],
     "max-len": ["error", 120],
-    "comma-dangle": ["error", "never"],
     "no-trailing-spaces": "error",
     "react/display-name": 0,
     "semi": ["off"],
