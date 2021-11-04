@@ -1,14 +1,19 @@
 {
   "name": "next-waxauth",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "Next.js wax auth library.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "clean": "rm -rf dist",
     "pretty": "prettier --write \"src/**/*.{ts,tsx}\" \"src/*.ts\"",
     "lint": "tsc --noEmit && eslint --fix --ext .ts ./src",
     "prepack": "npm run build",
     "build": "npm run clean && tsc -p tsconfig.build.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/World-of-Cryptopups/next-waxauth.git"
   },
   "keywords": [],
   "author": "",
