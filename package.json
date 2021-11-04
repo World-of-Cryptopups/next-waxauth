@@ -15,9 +15,14 @@
     "type": "git",
     "url": "git+https://github.com/World-of-Cryptopups/next-waxauth.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "next.js",
+    "wax",
+    "wax authenticator",
+    "next.js wax"
+  ],
+  "author": "World of Cryptopups (worldofcryptopups.cf)",
+  "license": "MIT",
   "devDependencies": {
     "@types/cookie": "^0.4.1",
     "@types/react": "^17.0.34",
