@@ -9,8 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@cryptopuppie/next-waxauth": "file:../../cryptopuppie-next-waxauth-0.0.1.tgz",
     "next": "12.0.2",
-    "next-waxauth": "file:../../next-waxauth-0.0.1.tgz",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
