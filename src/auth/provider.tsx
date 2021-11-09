@@ -117,12 +117,14 @@ const WaxAuthProvider = ({
     if (user?.type === "anchor") {
       const anchor = anchorLink(net.endpoint, net.chainId);
 
+      // this removes the session from the localstorage
       await anchor.clearSessions(net.dApp);
     }
 
     fetch("/api/auth/logout", {
       method: "GET",
     }).then(() => {
+      setIsLoggedIn(false);
       setUser(undefined);
     });
   };
