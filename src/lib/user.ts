@@ -7,12 +7,14 @@ class UserSession {
   readonly type: WaxWalletType | string;
   readonly wallet: string;
   readonly pubKeys: string[];
+  readonly permission: string;
   net: WaxNetProps;
 
   constructor(user: WaxUserProps | null, net: WaxNetProps) {
     this.type = user?.type || "";
     this.wallet = user?.wallet || "";
     this.pubKeys = user?.pubKeys || [];
+    this.permission = user?.permission ?? "active"; // it will use active as default permission if it is null
 
     this.net = net;
   }
