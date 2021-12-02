@@ -6,7 +6,7 @@ import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   const { loginWithAnchor } = useAuthFunctions();
-  const { user } = useWaxUser();
+  const { user, isLoggedIn } = useWaxUser();
 
   return (
     <div className={styles.container}>
@@ -28,8 +28,39 @@ const Home: NextPage = () => {
 
         <p>{user?.wallet}</p>
 
-        <button onClick={loginWithAnchor}>Login With Anchor</button>
+        {!isLoggedIn ? (
+          <button onClick={loginWithAnchor}>Login With Anchor</button>
+        ) : (
+          <button
+            onClick={async () => {
+              if (!user) return;
 
+              await user.transact(
+                [
+                  {
+                    account: "eosio.token",
+                    name: "transfer",
+                    authorization: [
+                      {
+                        actor: user.wallet,
+                        permission: user.permission,
+                      },
+                    ],
+                    data: {
+                      from: user.wallet,
+                      to: "eosio",
+                      quantity: "0.00000001 WAX",
+                      memo: "",
+                    },
+                  },
+                ],
+                { blocksBehind: 3, expireSeconds: 1200 }
+              );
+            }}
+          >
+            test transaction
+          </button>
+        )}
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Documentation &rarr;</h2>

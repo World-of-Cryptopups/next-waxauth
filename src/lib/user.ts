@@ -1,4 +1,7 @@
 import { WaxJS } from "@waxio/waxjs/dist";
+import { TransactOptions } from "anchor-link";
+import { TransactConfig } from "eosjs/dist/eosjs-api-interfaces";
+import { Action } from "eosjs/dist/eosjs-serialize";
 import { anchorLink } from "../auth/walletproviders";
 import { WaxNetProps } from "../typings/net";
 import { WaxUserProps, WaxWalletType } from "../typings/user";
@@ -19,7 +22,23 @@ class UserSession {
     this.net = net;
   }
 
-  async session() {
+  /**
+   * Send a transaction. This is a custom wrapper to the transact function from `waxjs` and `anchor-link`.
+   *
+   * @param {Action[]} actions
+   * @param {TransactConfig&TransactOptions} options?
+   * @returns {TransactResult}
+   */
+  async transact(
+    actions: Action[],
+    options?: TransactConfig & TransactOptions
+  ) {
+    const session = await this._session();
+
+    return await session?.transact({ actions }, { ...options });
+  }
+
+  private async _session() {
     switch (this.type) {
       case "wax-cloud-wallet": {
         return new WaxJS({
