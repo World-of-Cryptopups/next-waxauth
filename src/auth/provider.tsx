@@ -32,9 +32,9 @@ interface WaxAuthContextProps {
 const WaxAuthContext = createContext<WaxAuthContextProps>({
   auth: { isLoggedIn: false },
   functions: {
-    loginWithAnchor: () => null,
-    loginWithCloudWallet: () => null,
-    logout: () => null,
+    loginWithAnchor: async () => undefined,
+    loginWithCloudWallet: async () => undefined,
+    logout: async () => undefined,
   },
 });
 

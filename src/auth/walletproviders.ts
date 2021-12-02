@@ -16,9 +16,9 @@ const wax = (endpoint: string) => {
 };
 
 interface AuthFunctions {
-  loginWithCloudWallet: () => void;
-  loginWithAnchor: () => void;
-  logout: () => void;
+  loginWithCloudWallet: () => Promise<void>;
+  loginWithAnchor: () => Promise<void>;
+  logout: () => Promise<void>;
 }
 
 export { wax, anchorLink };
