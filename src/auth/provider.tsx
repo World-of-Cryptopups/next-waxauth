@@ -98,11 +98,9 @@ const WaxAuthProvider = ({
       .then((r) => r.json())
       .then((d: APIResponseProps<WaxUserProps>) => {
         if (d.error) {
-          console.error(d);
-          return;
+          throw new Error(d.message);
         }
 
-        setUser(new UserSession(d.data, net));
         setIsLoggedIn(true);
       })
       .catch(() =>

@@ -7,6 +7,15 @@ import me from "./me";
 type AuthQueries = "me" | "logout" | "login";
 
 const handleAuth = (req: NextApiRequest, res: NextApiResponse) => {
+  // check SECRET_TOKEN env
+  const token = process.env.SECRET_TOKEN;
+  if (!token) {
+    res
+      .status(400)
+      .json({ error: true, message: "No SECRET_TOKEN env provided." });
+    return;
+  }
+
   const { auth } = req.query;
   const path = joinString(auth) as AuthQueries;
 
