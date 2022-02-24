@@ -47,11 +47,12 @@
   "dependencies": {
     "@hapi/iron": "^6.0.0",
     "@waxio/waxjs": "^1.0.4",
-    "anchor-link": "^3.3.4",
+    "anchor-link": "^3.3.5",
     "anchor-link-browser-transport": "^3.2.5",
     "cookie": "^0.4.1",
-    "next": "^12.0.7",
-    "swr": "^1.1.2-beta.0",
+    "next": "^12.1.0",
+    "next-seo": "^5.1.0",
+    "swr": "^1.2.2",
     "url-join": "^4.0.1"
   }
 }
