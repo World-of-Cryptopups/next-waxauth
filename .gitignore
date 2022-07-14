@@ -5,5 +5,5 @@ dist
 
 .env*
 
-# we don't want to have dependency problems in our examples
-examples/**/package-lock.json
+
+.pnpm-debug.log

@@ -39,7 +39,7 @@ const createSession = async (res: NextApiResponse, data: WaxUserProps) => {
 // gets the session from the cookie
 const getSession = async (req: NextApiRequest): Promise<WaxUserProps> => {
   const cookies = parseCookies(req);
-  return await decrypt(cookies?.[TOKEN_NAME]);
+  return await decrypt(cookies?.[TOKEN_NAME] ?? "");
 };
 
 // removes the session cookie from the browser / header
