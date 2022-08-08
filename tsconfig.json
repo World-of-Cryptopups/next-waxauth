@@ -3,7 +3,6 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "declaration": true,
-    "declarationDir": "dist/typings",
     "moduleResolution": "node",
     "sourceMap": false,
     "strict": true,

@@ -1,10 +1,10 @@
 {
   "name": "@cryptopuppie/next-waxauth",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Next.js authenticator for wax.",
   "main": "./dist/index.js",
   "exports": "./dist/index.js",
-  "types": "./dist/typings/index.d.ts",
+  "types": "./dist/index.d.ts",
   "type": "module",
   "scripts": {
     "clean": "rm -rf dist",
