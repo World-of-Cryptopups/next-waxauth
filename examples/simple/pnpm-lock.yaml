@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@cryptopuppie/next-waxauth': file:../../cryptopuppie-next-waxauth-0.1.0.tgz
+  '@cryptopuppie/next-waxauth': file:cryptopuppie-next-waxauth-0.2.0.tgz
   '@types/react': 17.0.34
   eslint: 7.32.0
   eslint-config-next: 12.0.2

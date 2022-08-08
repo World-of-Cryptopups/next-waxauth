@@ -1,5 +1,5 @@
 import { LinkSession } from "anchor-link";
-import React, {
+import {
   createContext,
   ReactNode,
   useContext,
@@ -42,6 +42,8 @@ const WaxAuthProvider = ({
   children,
   net,
 }: WaxAuthProviderProps): JSX.Element => {
+  const { data } = useSWR<UserApiSessionProps>("/api/auth/me", fetcher);
+
   const [user, setUser] = useState<UserSession | undefined>(undefined);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -127,8 +129,6 @@ const WaxAuthProvider = ({
     });
   };
 
-  const { data } = useSWR<UserApiSessionProps>("/api/auth/me", fetcher);
-
   useEffect(() => {
     if (!data) return;
 
@@ -187,4 +187,4 @@ const useAuthFunctions = () => {
 };
 
 export default WaxAuthProvider;
-export { WaxAuthContext, useWaxUser, useAuthFunctions };
+export { WaxAuthContext, useWaxUser, useAuthFunctions, useWaxAuth };
