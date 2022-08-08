@@ -1,4 +1,4 @@
-import { WaxJS } from "@waxio/waxjs/dist";
+import * as waxjs from "@waxio/waxjs/dist/index.js";
 import { TransactOptions } from "anchor-link";
 import { TransactConfig } from "eosjs/dist/eosjs-api-interfaces";
 import { Action } from "eosjs/dist/eosjs-serialize";
@@ -41,7 +41,7 @@ class UserSession {
   private async _session() {
     switch (this.type) {
       case "wax-cloud-wallet": {
-        return new WaxJS({
+        return new waxjs.WaxJS({
           rpcEndpoint: this.net.endpoint,
           userAccount: this.wallet,
           pubKeys: this.pubKeys,

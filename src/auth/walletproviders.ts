@@ -1,4 +1,4 @@
-import * as waxjs from "@waxio/waxjs/dist";
+import * as waxjs from "@waxio/waxjs/dist/index.js";
 import AnchorLink from "anchor-link";
 import AnchorLinkBrowserTransport from "anchor-link-browser-transport";
 

@@ -1,3 +1,3 @@
-import handleAuth from "@cryptopuppie/next-waxauth/dist/api";
+import { handleAuth } from "@cryptopuppie/next-waxauth";
 
 export default handleAuth;

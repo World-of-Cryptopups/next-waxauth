@@ -9,15 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@cryptopuppie/next-waxauth": "file:cryptopuppie-next-waxauth-0.2.0.tgz",
-    "next": "^12.0.7",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "@cryptopuppie/next-waxauth": "file:cryptopuppie-next-waxauth-0.2.3.tgz",
+    "next": "^12.2.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/react": "17.0.34",
-    "eslint": "7.32.0",
-    "eslint-config-next": "12.0.2",
-    "typescript": "4.4.4"
+    "@types/react": "18.0.17",
+    "eslint": "8.21.0",
+    "eslint-config-next": "12.2.4",
+    "typescript": "4.7.4"
   }
 }
