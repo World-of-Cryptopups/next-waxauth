@@ -11,7 +11,7 @@
     "pretty": "prettier --write \"src/**/*.{ts,tsx}\" \"src/*.ts\"",
     "lint": "tsc --noEmit && eslint --fix --ext .ts ./src",
     "prepack": "pnpm build",
-    "build": "pnpm clean && tsc"
+    "build": "rm -rf dist && tsup"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,26 @@
     "wax authenticator",
     "next.js wax"
   ],
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "format": [
+      "esm"
+    ],
+    "dts": {
+      "resolve": true
+    },
+    "splitting": true,
+    "clean": true,
+    "external": [
+      "react",
+      "react-dom",
+      "cross-fetch",
+      "swr",
+      "url-join"
+    ]
+  },
   "author": "World of Cryptopups (worldofcryptopups.cf)",
   "license": "MIT",
   "devDependencies": {
