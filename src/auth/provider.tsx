@@ -6,7 +6,7 @@ import {
   useEffect,
   useState,
 } from "react";
-import useSWR from "swr";
+import useSWR, { mutate } from "swr";
 import fetcher from "../lib/fetcher";
 import UserSession from "../lib/user";
 import { APIResponseProps } from "../typings/api";
@@ -103,7 +103,7 @@ const WaxAuthProvider = ({
           throw new Error(d.message);
         }
 
-        setIsLoggedIn(true);
+        mutate("/api/auth/me");
       })
       .catch(() =>
         console.error(
@@ -135,7 +135,12 @@ const WaxAuthProvider = ({
     if (data.session) {
       setIsLoggedIn(true);
       setUser(new UserSession(data.session, net));
+
+      return;
     }
+
+    setIsLoggedIn(false);
+    setUser(undefined);
   }, [data]);
 
   return (

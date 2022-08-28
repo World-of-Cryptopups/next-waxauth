@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@cryptopuppie/next-waxauth': file:cryptopuppie-next-waxauth-0.2.3.tgz
+  '@cryptopuppie/next-waxauth': file:cryptopuppie-next-waxauth-0.3.0.tgz
   '@types/react': 18.0.17
   eslint: 8.21.0
   eslint-config-next: 12.2.4
@@ -11,7 +11,7 @@ specifiers:
   typescript: 4.7.4
 
 dependencies:
-  '@cryptopuppie/next-waxauth': file:cryptopuppie-next-waxauth-0.2.3.tgz_biqbaboplfbrettd7655fr4n2y
+  '@cryptopuppie/next-waxauth': file:cryptopuppie-next-waxauth-0.3.0.tgz_biqbaboplfbrettd7655fr4n2y
   next: 12.2.4_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -56,8 +56,8 @@ packages:
       - supports-color
     dev: true
 
-  /@greymass/eosio/0.6.1:
-    resolution: {integrity: sha512-K9VmejZmXHczuLBdQzEQayzISEG/s1PQ9awNf3nMeiVOnmjC5jnw/qNatY1PDpVhXsu+FcW59EAoCEWpuKnrfA==}
+  /@greymass/eosio/0.6.3:
+    resolution: {integrity: sha512-zzY1Wvcr15Q1UroomDJzeFz2MDo90TfY3BaEyZVrqDpWUrTY6mBqblGg/8jmzpSIOvjyTkClifdc2pZTZQdFCw==}
     dependencies:
       bn.js: 4.12.0
       brorand: 1.1.0
@@ -409,7 +409,7 @@ packages:
   /anchor-link/3.5.1:
     resolution: {integrity: sha512-77hRmr1M8PwExXhTwKFrE2jXPq4AsfoUCqAgcQelD86TvEuDUrXgKNl1zfoAXLC8mIU3ZW+QdF7fieZQRrq7Kg==}
     dependencies:
-      '@greymass/eosio': 0.6.1
+      '@greymass/eosio': 0.6.3
       '@greymass/miniaes': 1.0.0
       eosio-signing-request: 2.5.1
       fetch-ponyfill: 7.1.0
@@ -679,7 +679,7 @@ packages:
   /eosio-signing-request/2.5.1:
     resolution: {integrity: sha512-vA1jg118gSLJUmAs9FLDfrz+h2/sxt3lEKu19AO1lAzCgCB3Ib70VGfmFoLrty9Qzm1USTnn1EkogN780Ylq0Q==}
     dependencies:
-      '@greymass/eosio': 0.6.1
+      '@greymass/eosio': 0.6.3
       tslib: 2.4.0
     dev: false
 
@@ -2140,11 +2140,11 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  file:cryptopuppie-next-waxauth-0.2.3.tgz_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-HdOkLj+9K3jrMg2P01vt2jFe6/nq5+e6Qd4RbOtFFC0M881NyJ3uXieohF4p9lSvmXlvqHq1ZysV7aDpz/EWEA==, tarball: file:cryptopuppie-next-waxauth-0.2.3.tgz}
-    id: file:cryptopuppie-next-waxauth-0.2.3.tgz
+  file:cryptopuppie-next-waxauth-0.3.0.tgz_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-WtPbsdh5POe2vTdcV2oJltHyBMiq2TP2yZfHeKCNHTbTjIaIaRhg5hwJQ0P0EiG+RICXYIT+F5Giiiosi8Y9SA==, tarball: file:cryptopuppie-next-waxauth-0.3.0.tgz}
+    id: file:cryptopuppie-next-waxauth-0.3.0.tgz
     name: '@cryptopuppie/next-waxauth'
-    version: 0.2.3
+    version: 0.3.0
     dependencies:
       '@hapi/iron': 7.0.0
       '@waxio/waxjs': 1.1.0
